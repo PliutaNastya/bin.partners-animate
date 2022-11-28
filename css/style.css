@@ -242,7 +242,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.625rem;
+  gap: 1.0625rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -276,14 +276,6 @@ h6 {
 .menu__button {
   padding: 10px 18px !important;
   font-size: 1.25rem !important;
-}
-
-.menu-open .menu__button {
-  font-size: 1.5rem !important;
-}
-
-.icon-menu {
-  display: none;
 }
 
 .footer {
@@ -1115,6 +1107,12 @@ h6 {
   opacity: 1;
 }
 
+@media (min-width: 31.24875em) {
+  .menu__button_2 {
+    display: none;
+  }
+}
+
 @media (min-width: 76.875em) {
   .button {
     padding-right: 2.96875rem;
@@ -1714,123 +1712,8 @@ h6 {
 }
 
 @media (max-width: 73.75em) {
-  .menu__body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top: 0;
-    left: -100%;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    overflow: auto;
-    background: rgba(61, 61, 61, 0.72);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-    gap: 1.875rem;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    padding-bottom: 1.875rem;
-  }
-
-  .menu-open .menu__body {
-    left: 0;
-  }
-
-  .menu-open .menu__body::before {
-    left: 0;
-  }
-
-  .menu__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    row-gap: 3.75rem;
-    color: #fff;
-  }
-
-  .menu__link {
-    font-size: 1.75rem;
-  }
-
-  .icon-menu {
-    display: block;
-    position: relative;
-    width: 1.875rem;
-    height: 1.125rem;
-    z-index: 5;
-  }
-
-  .icon-menu span,
-  .icon-menu::before,
-  .icon-menu::after {
-    content: "";
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    height: 0.125rem;
-    background-color: #000;
-  }
-
-  .icon-menu::before {
-    top: 0;
-  }
-
-  .icon-menu::after {
-    bottom: 0;
-  }
-
-  .icon-menu span {
-    top: calc(50% - 0.0625rem);
-  }
-
-  .menu-open .icon-menu span {
-    width: 0;
-  }
-
-  .menu-open .icon-menu::before {
-    top: calc(50% - 0.0625rem);
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .menu-open .icon-menu::after {
-    bottom: calc(50% - 0.0625rem);
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
   .images-main-block__decor_2 {
     left: 22%;
-  }
-}
-
-@media (max-width: 73.75em) and (max-width: 0.125em) {
-  .menu__body {
-    padding-top: 7.5rem;
-  }
-}
-
-@media (max-width: 73.75em) and (any-hover: none) {
-  .icon-menu {
-    cursor: default;
   }
 }
 
@@ -1941,6 +1824,10 @@ h6 {
 }
 
 @media (max-width: 47.99875em) {
+  .menu__list {
+    display: none;
+  }
+
   .main-block__decor {
     display: none;
   }
@@ -2033,6 +1920,16 @@ h6 {
 @media (max-width: 33.75em) {
   .images-main-block__decor_2 {
     left: 0%;
+  }
+}
+
+@media (max-width: 31.24875em) {
+  .menu__button {
+    padding: 10px 40px !important;
+  }
+
+  .menu__button_1 {
+    display: none;
   }
 }
 
@@ -2909,26 +2806,6 @@ h6 {
 @supports not (margin-bottom: clamp( 1.25rem , 0.6565934066rem  +  2.967032967vw , 2.9375rem )) {
     .get-started__title {
       margin-bottom: calc(1.25rem + 1.6875 * (100vw - 20rem) / 56.875);
-    }
-}
-}
-
-@media (max-width: 73.75em) and (min-width: 20em) {
-  .menu__body {
-    padding-top: 11.25rem;
-  }
-}
-
-@media (max-width: 73.75em) and (min-width: 0.125em) and (max-width: 20em) {
-@supports (padding-top: clamp( 7.5rem , 7.4764150943rem  +  18.8679245283vw , 11.25rem )) {
-    .menu__body {
-      padding-top: clamp( 7.5rem , 7.4764150943rem  +  18.8679245283vw , 11.25rem );
-    }
-}
-
-@supports not (padding-top: clamp( 7.5rem , 7.4764150943rem  +  18.8679245283vw , 11.25rem )) {
-    .menu__body {
-      padding-top: calc(7.5rem + 3.75 * (100vw - 0.125rem) / 19.875);
     }
 }
 }
